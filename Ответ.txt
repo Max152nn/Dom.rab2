@@ -1,0 +1,9 @@
+a)При добавлениее элементов быстрее работает Linkedlist
+При удалении и вставки быстрее работает ArrayList
+б)добавление элементов быстрее всего проходит  в  HashSet,затем в LinkedHashSet,потом в TreeSet.
+Но с увеличение числа значений добавление становится быстрее в LinkedHashSet.
+Удаление быстрее происходит в linkedHashSet,затем в HashSet,потом в TreeSet.
+Вставка быстрее происходит в linkedHashSet,затем в HashSet,потом в TreeSet.
+В)добавление элементов быстрее всего проходит  в  LinkedHashMap,затем в HashMap,потом в TreeMap.
+Удаление происходит в linkedHashSet и в HashSet примерно одинаковое,потом в TreeSet.
+Вставка происходит в linkedHashSet и в HashSet примерно одинаковое,потом в TreeSet.
