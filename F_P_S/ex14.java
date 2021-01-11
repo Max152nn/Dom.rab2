@@ -19,15 +19,17 @@ public class ex14 {
 
         System.out.println("Введите массив: ");
         for (int i = 0; i < size; i++) {
-                chislo = reader.readLine();
-                if(!("".equals(chislo))) {
-                    mas[i][0] = Integer.valueOf(chislo);
-                for (int j = 1; j < size; j++) {
-                    mas[i][j] = scan.nextInt();
+            a = reader.readLine();
+            if (!("".equals(a))) {
+                int[] numbers = Arrays.stream(a.split("\\s"))
+                        .mapToInt(Integer::parseInt)
+                        .toArray();
+                for (int j = 0; j < size; j++) {
+                    mas[i][j] = numbers[j];
                 }
             }else {
-                    return;
-                }
+                break;
+            }
         }
         magicSquare(mas);
         printMatrix(mas);
