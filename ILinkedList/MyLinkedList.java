@@ -59,6 +59,12 @@ public class MyLinkedList<E> implements ILinkedList<E> {
 
     @Override
     public void clear() {
+        Node<E> x = first;
+        //Занулить все элементы
+        for (int i = 0; i < size; i++){
+                x.setData(null);
+                x=x.getNext();
+        }
         first=null;
         last=null;
         size =0;
@@ -150,6 +156,21 @@ public class MyLinkedList<E> implements ILinkedList<E> {
     }
 
     @Override
+    public E[] toArray(E[] a) {
+        if (a.length < size)
+            a = (E[])java.lang.reflect.Array.newInstance(
+                    a.getClass().getComponentType(), size);
+        int i = 0;
+        Object[] result = a;
+        for (Node<E> x = first; x != null; x = x.getNext())
+            result[i++] = x.getData();
+
+        if (a.length > size)
+            a[size] = null;
+
+        return a;
+    }
+
     public E[] toArray() {
         int size = size();
         E[] mas = (E[]) new Object[size];
